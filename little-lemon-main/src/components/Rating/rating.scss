@@ -1,0 +1,12 @@
+@import "../../styles/index.scss";
+
+.rating-wrapper {
+  display: flex;
+  gap: $spacing-8;
+
+  svg {
+    width: $spacing-24;
+    height: $spacing-24;
+    color: #ffc319;
+  }
+}

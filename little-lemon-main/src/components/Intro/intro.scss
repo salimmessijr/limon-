@@ -1,0 +1,90 @@
+@import "../../styles/index.scss";
+
+.intro-wrapper {
+  position: relative;
+
+  .intro-container {
+    position: relative;
+    padding: $spacing-16 $spacing-24;
+
+    &::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: -($spacing-24);
+      right: -($spacing-24);
+      bottom: 0;
+      background-color: $primary-100;
+      z-index: -1;
+    }
+  }
+
+  .title,
+  .city {
+    font-family: "Markazi Text";
+  }
+
+  .title {
+    font-size: $font-xxlarge;
+    color: $primary-80;
+    font-weight: bold;
+  }
+
+  .city,
+  .description {
+    color: $highlight-100;
+  }
+
+  .city {
+    font-size: $font-large;
+  }
+
+  .description {
+    font-size: $font-small;
+    font-family: "Karla";
+  }
+
+  .reserve-button {
+    display: inline-block;
+    margin-top: $spacing-24;
+    background-color: $primary-80;
+    color: $highlight-80;
+    font-family: "Karla";
+    border-radius: $spacing-16;
+    border: none;
+    padding: $spacing-8 $spacing-16;
+    font-weight: bold;
+    text-decoration: none;
+    text-align: center;
+    transition: background-color 0.3s;
+
+    &:hover {
+      background-color: darken($primary-80, 10%);
+    }
+  }
+
+  .image {
+    display: none;
+  }
+
+  @media (min-width: $breakpoint-mobile) {
+    margin-bottom: 100px;
+
+    .image {
+      display: flex;
+      width: 250px;
+      height: auto;
+      position: absolute;
+      right: $spacing-60;
+      top: $spacing-36;
+
+      & img {
+        border-radius: $spacing-16;
+      }
+    }
+
+    .description {
+      width: 500px;
+    }
+  }
+}

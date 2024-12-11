@@ -1,0 +1,18 @@
+@import "../../styles/index.scss";
+
+.testimonials-wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: $spacing-56;
+  background-color: $secondary-80;
+  padding-top: $spacing-60;
+  padding-bottom: $spacing-32;
+
+  .title {
+    color: $highlight-80;
+    font-weight: bold;
+    font-size: $font-xlarge;
+    font-family: "Markazi Text";
+    text-align: center;
+  }
+}

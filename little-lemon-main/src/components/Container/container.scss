@@ -1,0 +1,11 @@
+@import "../../styles/index.scss";
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: $spacing-24;
+  height: 100%;
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
+}

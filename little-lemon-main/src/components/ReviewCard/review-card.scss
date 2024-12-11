@@ -1,0 +1,22 @@
+@import "../../styles/index.scss";
+
+.card-review-wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: $spacing-24;
+  border-radius: $spacing-16;
+  background-color: $highlight-100;
+  padding: $spacing-16;
+  margin: 0 $spacing-16;
+  font-family: "Karla";
+
+  .header {
+    display: flex;
+    gap: $spacing-16;
+    align-items: center;
+
+    img {
+      width: 50px;
+    }
+  }
+}

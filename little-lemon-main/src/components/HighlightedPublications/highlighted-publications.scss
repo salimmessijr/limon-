@@ -1,0 +1,57 @@
+@import "../../styles/index.scss";
+
+.highlighted-publications-wrapper {
+  display: flex;
+  flex-direction: column;
+  padding: $spacing-40 0;
+  gap: $spacing-40;
+
+  .header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    .title {
+      font-size: $font-medium;
+      font-family: "Karla";
+      font-weight: bold;
+      color: $primary-100;
+    }
+
+    .menu-button {
+      display: flex;
+      justify-content: center;
+      border-radius: $spacing-16;
+      background-color: $primary-80;
+      text-align: left;
+      font-family: "Karla";
+      font-weight: bold;
+      font-size: $font-small;
+      color: $highlight-80;
+      border: none;
+      padding: $spacing-8;
+      width: 100px;
+      text-align: center;
+      transition: background-color 0.3s;
+      text-decoration: none;
+
+      &:hover {
+        background-color: darken($primary-80, 10%);
+        cursor: pointer;
+      }
+    }
+  }
+
+  .cards {
+    display: flex;
+    gap: $spacing-16;
+    flex-direction: column;
+  }
+
+  @media (min-width: $breakpoint-mobile) {
+    .cards {
+      justify-content: center;
+      flex-direction: row;
+    }
+  }
+}

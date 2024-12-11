@@ -1,0 +1,17 @@
+@import "../../styles/index.scss";
+
+$namespace: "ui-core-nav";
+
+.#{$namespace} {
+  @media (max-width: $breakpoint-mobile) {
+    .desktop {
+      display: none;
+    }
+  }
+
+  @media (min-width: $breakpoint-mobile) {
+    .mobile {
+      display: none;
+    }
+  }
+}

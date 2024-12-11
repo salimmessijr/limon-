@@ -1,0 +1,72 @@
+@import "../../styles/index.scss";
+
+.form-wrapper {
+  padding: $spacing-24;
+  display: flex;
+  justify-content: center;
+}
+
+.form,
+input {
+  font-family: "Karla";
+  font-size: $font-small;
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  gap: $spacing-12;
+
+  label {
+    font-size: $font-small;
+    font-weight: bold;
+  }
+
+  input,
+  select {
+    border-radius: $spacing-8;
+    padding: $spacing-12;
+    border: 2px solid $primary-100;
+  }
+
+  .submit-button {
+    display: flex;
+    justify-content: center;
+    border-radius: $spacing-16;
+    background-color: $primary-80;
+    text-align: left;
+    font-family: "Karla";
+    font-weight: bold;
+    font-size: $font-small;
+    color: $highlight-80;
+    border: none;
+    padding: $spacing-12;
+    width: 100%;
+    text-align: center;
+    transition: background-color 0.3s;
+    text-decoration: none;
+    margin-top: $spacing-16;
+
+    &:hover {
+      background-color: darken($primary-80, 10%);
+      cursor: pointer;
+    }
+  }
+
+  .error {
+    color: #e74c3c;
+  }
+
+  @media (min-width: $breakpoint-mobile) {
+    max-width: 400px;
+  }
+}
+
+@media (min-width: $breakpoint-mobile) {
+  .Toastify {
+    .notification {
+      width: 500px;
+    }
+  }
+}

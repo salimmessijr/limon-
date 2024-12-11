@@ -1,0 +1,112 @@
+@import "../../styles/index.scss";
+
+$namespace: "ui-core-footer";
+
+.#{$namespace} {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  padding: $spacing-24 0;
+
+  .logo img {
+    width: 100px;
+  }
+
+  .social {
+    display: flex;
+    gap: $spacing-16;
+    flex-direction: column;
+    color: $highlight-80;
+    font-family: "Karla";
+  }
+
+  .social-icons {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+
+    & a {
+      border-radius: 100%;
+      width: $spacing-36;
+      background-color: $secondary-100;
+      padding: 0;
+      height: $spacing-36;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      color: $primary-100;
+      text-decoration: none;
+      transition: background-color 0.3s ease, color 0.3s ease,
+        box-shadow 0.3s ease;
+    }
+
+    & a:hover,
+    & a:focus {
+      color: $highlight-80;
+      background-color: lighten($secondary-100, 10%);
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+      outline: none;
+    }
+
+    & a:active {
+      transform: scale(0.95);
+    }
+  }
+
+  .contact {
+    display: flex;
+    flex-direction: column;
+    gap: $spacing-12;
+    justify-content: flex-start;
+
+    .address {
+      color: $primary-100;
+      font-size: $font-small;
+    }
+
+    a {
+      color: $primary-100;
+      text-decoration: none;
+      transition: color 0.3s ease, text-shadow 0.3s ease;
+
+      &:hover,
+      &:focus {
+        color: $highlight-80;
+        text-shadow: 0 0 5px rgba(255, 255, 255, 0.6);
+      }
+    }
+  }
+
+  .navigation .links ul {
+    display: flex;
+    flex-direction: column;
+    margin: 0;
+  }
+
+  .navigation,
+  .contact {
+    margin-top: $spacing-16;
+  }
+
+  @media (min-width: $breakpoint-mobile) {
+    display: grid;
+    grid-template-columns: 30% 1fr 1fr 30%;
+
+    .logo {
+      margin: 0 auto;
+    }
+
+    .logo img {
+      width: 150px;
+    }
+
+    .navigation {
+      display: flex;
+      justify-content: center;
+    }
+
+    .navigation,
+    .contact {
+      margin-top: 0;
+    }
+  }
+}

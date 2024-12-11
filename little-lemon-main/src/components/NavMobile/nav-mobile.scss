@@ -1,0 +1,7 @@
+@import "../../styles/index.scss";
+
+$namespace: "ui-core-nav";
+
+.#{$namespace}--mobile {
+  padding: $spacing-24;
+}
